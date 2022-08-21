@@ -10,7 +10,7 @@ const ConfirmPassword: React.FC = () => {
   const { getField } = useWatchForm();
   const password = getField('password');
 
-  const validate = useCallback((value) => {
+  const validate = useCallback((value = '') => {
     if (value === password?.value) {
       return true;
     }
